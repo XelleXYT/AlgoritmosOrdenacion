@@ -23,6 +23,7 @@ public class AlgoritmosOrdenacion {
 		    numeros[i + 1] = aux;
 		}
 	    }
+	    System.out.println(Arrays.toString(numeros));
 	}
     }
 
@@ -34,7 +35,6 @@ public class AlgoritmosOrdenacion {
 	AlgoritmosOrdenacion ejercicios = new AlgoritmosOrdenacion();
 	int[] numeros = {57, 22, 11, 13, 21, 7};
 	ejercicios.ordenacionBurbuja(numeros);
-	System.out.println(Arrays.toString(numeros));
     }
 
 }
