@@ -15,14 +15,20 @@ public class AlgoritmosOrdenacion {
 
     public void ordenacionBurbuja(int[] numeros) {
 	int aux;
-	for (int j = 0; j < numeros.length; j++) {
-	    for (int i = 0; i < numeros.length - 1; i++) {
+	boolean cambio = false;
+	int contador = 1;
+	System.out.println(Arrays.toString(numeros));
+	while (!cambio) {
+	    cambio = true;
+	    for (int i = 0; i < numeros.length - contador; i++) {
 		if (numeros[i] > numeros[i + 1]) {
 		    aux = numeros[i];
 		    numeros[i] = numeros[i + 1];
 		    numeros[i + 1] = aux;
+		    cambio = false;
 		}
 	    }
+	    contador ++;
 	    System.out.println(Arrays.toString(numeros));
 	}
     }
