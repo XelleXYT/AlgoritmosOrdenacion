@@ -28,7 +28,20 @@ public class AlgoritmosOrdenacion {
 		    cambio = false;
 		}
 	    }
-	    contador ++;
+	    contador++;
+	    System.out.println(Arrays.toString(numeros));
+	}
+    }
+
+    public void ordenacionInsercion(int[] numeros) {
+	for (int i = 1; i < numeros.length; i++) {
+	    int aux = numeros[i];
+	    int j = i;
+	    while (j > 0 && aux < numeros[j - 1]) {
+		numeros[j] = numeros[j - 1];
+		j--;
+	    }
+	    numeros[j] = aux;
 	    System.out.println(Arrays.toString(numeros));
 	}
     }
@@ -40,7 +53,8 @@ public class AlgoritmosOrdenacion {
 	// TODO code application logic here
 	AlgoritmosOrdenacion ejercicios = new AlgoritmosOrdenacion();
 	int[] numeros = {57, 22, 11, 13, 21, 7};
-	ejercicios.ordenacionBurbuja(numeros);
+	//ejercicios.ordenacionBurbuja(numeros);
+	ejercicios.ordenacionInsercion(numeros);
     }
 
 }
